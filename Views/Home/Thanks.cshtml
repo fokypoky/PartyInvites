@@ -1,0 +1,28 @@
+﻿@model GuestResponse
+@{
+	Layout = null;
+}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=display-width"/>
+		<title>Thanks</title>
+	</head>
+	<body>
+		<div>
+			<h1>Thank you, @Model.Name!</h1>
+			@if (Model.WillAttend == true)
+			{
+				@:It's great that you're coming
+			}
+			else
+			{
+				@:Sorry :(
+			}
+		</div>
+		Click <a asp-action="ListResponses">here</a> to see who is coming <br/>
+		<a asp-action="RspvForm"> Go back</a>
+	</body>
+</html>
